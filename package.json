@@ -1,8 +1,8 @@
 {
-  "name": "language-wh-henri",
-  "version": "1.0.1",
-  "description": "Syntax highlighting for WH (Henri) files used internally within Vaadin Ltd.",
-  "repository": "https://github.com/tehapo/atom-language-wh-henri",
+  "name": "language-wh-sami",
+  "version": "0.1.0",
+  "description": "Syntax highlighting for WH (Sami) files used internally at Vaadin",
+  "repository": "https://github.com/jtreml/atom-language-wh-sami",
   "license": "Apache-2.0",
   "engines": {
     "atom": ">0.50.0"

@@ -1,3 +1,3 @@
-# WH (Henri) language for Atom
+# WH (Sami) language for Atom
 
-Syntax highlighting for WH (Henri) files used internally within Vaadin Ltd.
+Syntax highlighting for WH (Sami) files used internally at Vaadin.

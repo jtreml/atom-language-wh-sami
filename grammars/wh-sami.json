@@ -1,0 +1,115 @@
+{
+    "scopeName": "source.wh.txt",
+    "name": "WH (Sami)",
+    "fileTypes": [
+        "wh",
+        "wh.txt",
+        "whs",
+        "whs.txt"
+    ],
+    "patterns": [
+        {
+            "comment": "Project map start/end line",
+            "match": "^# PROJECT MAP (START|END)$",
+            "name": "entity.project.map"
+        },
+        {
+            "comment": "Comment line",
+            "match": "^#.*$",
+            "name": "comment.line"
+        },
+        {
+            "comment": "Project map entry line",
+            "match": "^(.*)(=)(.*)$",
+            "captures": {
+                "1": {
+                    "name": "variable.project.name"
+                },
+                "2": {
+                    "name": "punctuation.separator"
+                },
+                "3": {
+                    "name": "constant.numeric"
+                }
+            }
+        },
+        {
+            "comment": "WH entry line (simple)",
+            "match": "^([0-9]{4})(\\-)([0-9]{4})(:)(\\s\\w+)(:)(.*)$",
+            "captures": {
+                "1": {
+                    "name": "constant.numeric.hours"
+                },
+                "2": {
+                    "name": "punctuation.separator"
+                },
+                "3": {
+                    "name": "constant.numeric.hours"
+                },
+                "4": {
+                    "name": "punctuation.separator"
+                },
+                "5": {
+                    "name": "variable.project.name"
+                },
+                "6": {
+                    "name": "punctuation.separator"
+                },
+                "7": {
+                    "name": "string"
+                }
+            }
+        },
+        {
+            "comment": "WH entry line (full)",
+            "match": "^([0-9]{4})(\\-)([0-9]{4})(\\s\\()(\\w+)(\\):)(\\s\\w+)(:)(.*)$",
+            "captures": {
+                "1": {
+                    "name": "constant.numeric.hours"
+                },
+                "2": {
+                    "name": "punctuation.separator"
+                },
+                "3": {
+                    "name": "constant.numeric.hours"
+                },
+                "4": {
+                    "name": "punctuation.separator"
+                },
+                "5": {
+                    "name": "keyword"
+                },
+                "6": {
+                    "name": "punctuation.separator"
+                },
+                "7": {
+                    "name": "variable.project.name"
+                },
+                "8": {
+                    "name": "punctuation.separator"
+                },
+                "9": {
+                    "name": "string"
+                }
+            }
+        },
+        {
+            "comment": "Date line",
+            "match": "^(([0-9]{1,2}.{1}){1,2}([0-9]{2}|[0-9]{4}){0,1})$",
+            "captures": {
+                "1": {
+                    "name": "storage.date"
+                }
+            }
+        },
+        {
+            "comment": "Separator line",
+            "match": "^(\\-{4,999})$",
+            "captures": {
+                "1": {
+                    "name": "punctuation.separator"
+                }
+            }
+        }
+    ]
+}
